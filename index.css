@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Roboto-Bold";
-  src: url(/assets/fonts/Roboto-Bold.ttf);
+  src: url(assets/fonts/Roboto-Bold.ttf);
 }
 @font-face {
   font-family: "Roboto-Regular";
-  src: url(/assets/fonts/Roboto-Regular.ttf);
+  src: url(assets/fonts/Roboto-Regular.ttf);
 }
 body {
   background-color: hsl(234, 29%, 20%);
@@ -124,7 +124,7 @@ body {
     width: 0px;
   }
   #imageContainer {
-    background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
     transform: translateY(-460px) scale(0.9) translateX(-54px);
     height: 265px;
     width: 425px;
