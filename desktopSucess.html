@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+    font-family:"Roboto-Bold";
+    src: url(/assets/fonts/Roboto-Bold.ttf);
+}
+        @font-face {
+    font-family:"Roboto-Regular";
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+        body{
+            background-color:hsl(234, 29%, 20%);
+        }
+        #mainContainer{
+            width: 380px;
+            height: 380px;
+            background-color: white;
+            border-radius: 25px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #subContainer{
+            width: 300px;
+            height: 300px;
+            transform: translateX(50px) translateY(40px);
+        }
+        h1{
+            font-family:'Roboto-Bold';
+            font-size: 30px;
+            line-height: 30px;
+        }
+        #dismiss{
+            background-color: hsl(234, 29%, 20%);
+            color: white;
+            font-family: "Roboto-Regular";
+            padding: 10px;
+            border-radius: 5px;
+            width:290px;
+            transform: translateY(12px) translateX(1px);
+        }
+        #successMessage{
+            font-family: 'Roboto-Regular';
+            line-height: 18px;
+            font-size: 15px;
+            transform: translateY(3px) translateX(3px);
+        }
+        @media(max-width:430px)
+        {
+            #mainContainer{
+            width: 300px;
+            height: 600px;
+            background-color: white;
+            border-radius: 25px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #subContainer{
+            width: 300px;
+            height: 300px;
+            transform: translateX(4px) translateY(120px) scale(0.9);
+        }
+        #dismiss{
+            background-color: hsl(234, 29%, 20%);
+            color: white;
+            font-family: "Roboto-Regular";
+            padding: 17px;
+            border-radius: 8px;
+            width:290px;
+            transform: translateY(130px) translateX(1px);
+        }
+        h1{
+            font-family:'Roboto-Bold';
+            font-size: 30px;
+            line-height: 30px;
+            transform: translateY(10px);
+        }
+        #successMessage{
+            font-family: 'Roboto-Regular';
+            line-height: 18px;
+            font-size: 15px;
+            transform: translateY(10px) translateX(3px);
+        }
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            var urlParams = new URLSearchParams(window.location.search);
+            var email = urlParams.get('email');
+            document.getElementById("successMessage").innerText = "A confirmation email has been sent to " + email + ". Please open it and click the button inside to confirm your subscription.";
+            document.getElementById("dismiss").onclick = function()
+            {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="mainContainer">
+      <div id="subContainer">
+         <img src="/assets/images/icon-success.svg" alt="">
+         <h1>Thanks for subscribing!</h1>
+         <p id="successMessage"></p>
+         <button id="dismiss">Dismiss message</button>
+      </div>
+    </div>
+</body>
+</html>

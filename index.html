@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter sign up</title>
+    <link rel="stylesheet" href="/index.css">
+    <script>
+        window.onload = function(){
+            document.getElementById("subscribeButton").onclick = function(){
+            this.style.backgroundColor = "#FF6257"
+            var email = document.getElementById("emailInput").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var invalidText = document.getElementById("invalidEmail");
+            if(emailRegex.test(email))
+            {
+                window.location.href = "desktopSucess.html?email=" + encodeURIComponent(email);
+            }
+            else
+            {
+                invalidText.style.color = "#FF6257";
+                document.getElementById("emailInput").style.backgroundColor = "#FFD6CC";
+                document.getElementById("emailInput").style.color = "#ED9146";
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="subContainer">
+        <h1 id="heading">Stay updated!</h1>
+        <p class="paragraphs" id="mainParagraph">Join 60,000+ product managers receiving monthly updates on:</p>
+        <img id="iconImg1" src="/assets/images/icon-list.svg" alt="">
+        <img id="iconImg2" src="/assets/images/icon-list.svg" alt="">
+        <img id="iconImg3" src="/assets/images/icon-list.svg" alt="">
+        <p id="paragraph1" class="paragraphs">Product discovery and building what matters</sp>
+        <p id="paragraph2"class="paragraphs">Measuring to ensure updates are a success</p>
+        <p id="paragraph3"class="paragraphs">And much more!</p>
+        <p  id="emailText">Email address</p>
+        <p  id="invalidEmail">Valid email required</p>
+        <input id="emailInput" type="email" placeholder="email@company.com" >
+        <button id="subscribeButton" onclick="">Subscribe to monthly newsletter</button>
+        </div>
+        <div id="imageContainer">
+            </html><img id="mainImage" src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+        </div>
+    </div>
+</body>
