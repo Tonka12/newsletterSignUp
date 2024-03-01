@@ -165,12 +165,12 @@ body {
     margin-left: -25px;
   }
   #paragraph1 {
-    transform: translateY(-34px) translateX(33px);
+    transform: translateY(-37px) translateX(33px);
   }
   #paragraph2 {
-    transform: translateY(-23px) translateX(33px);
+    transform: translateY(-27px) translateX(33px);
   }
   #paragraph3 {
-    transform: translateY(-11px) translateX(33px);
+    transform: translateY(-16px) translateX(33px);
   }
 }
